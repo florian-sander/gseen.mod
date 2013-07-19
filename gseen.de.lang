@@ -1,0 +1,131 @@
+#####################################################################
+#
+# Deutsche Sprachdatei für GSeen.Mod v1.1.0
+#
+# Der Text in dieser Datei kann nach belieben verändert werden. Du
+# kannst Tags hinzufügen oder entfernen, wie es Dir gefällt. Die Tags
+# müssen nicht in einer bestimmten Reihenfolge oder Anzahl vorkommen.
+#
+# Wenn Du mehr als eine Zeile pro ID angibst, dann wird bei der
+# Antwort per Zufall eine daraus ausgewählt. (das funktioniert nicht
+# bei den Zeiteinheiten)
+#
+# Falls Du denkst, daß hier noch ein paar wichtige Tags fehlen, dann
+# schick mir einfach eine email. Vielleicht füge ich sie dann in der
+# nächsten Version hinzu.
+#
+# Eine komplette Liste der Verfügbaren Tags befindet sich am Ende von
+# slang_gseen_commands.c (leider ohne Erklährungen)
+#
+#####################################################################
+
+#
+## Zeiteinheiten
+#
+# jeweils in Singular und Plural
+#
+D 0 Jahr
+D 1 Jahre
+D 2 Woche
+D 3 Wochen
+D 4 Tag
+D 5 Tage
+D 6 Stunde
+D 7 Stunden
+D 8 Minute
+D 9 Minuten
+D 10 Sekunde
+D 11 Sekunden
+# falls ein üngültiger Zeitwert angegeben war, dann wird dieser Text ausgegeben:
+D 12 einiger Zeit
+
+
+#
+## Präfixe
+#
+# Dieses Fragment wird jeweils vor eine Antwort gesetzt. Dadurch
+# ist beispielsweise bei öffentlichen Anfragen ersichtlich, für
+# wen die Antwort ist.
+# Achtung: Die Nummer muss auf jeden Fall definiert werden. Sie muss
+#	   zwar keinen Text beinhalten, aber wenn sie nicht vorhanden
+#	   ist, dann gibt es eine Fehlermeldung
+
+# für Antworten, die in den Channel geschrieben werden:
+10 <?nick/?>, 
+# für Antworten, die per NOTICE an den User geschickt werden:
+11
+# für Antworten auf Anfragen, die per "/msg <bot> seen" erfolgt sind:
+12
+# und für Antworten auf der Partyline:
+13
+
+#
+## Fehlermeldungen
+#
+54 weißt Du was ein Parameter ist? ^_^
+54 ich würde Dir ja gerne helfen, aber solange Du nicht sagst, nach wem Du suchst, kann ich nicht viel tun.
+54 meinst Du nicht, es wäre geschickter zu sagen, nach wem Du überhaupt suchst?
+54 42.
+55 sehe ich etwa wie ein Spiegel aus? ^_^
+55 Spieglein, Spieglein an der Wand...
+55 leidest Du etwa unter multiplen Persönlichkeiten? *eg*
+56 also wenn Du <?query/?> jetzt hier nicht sehen kannst, dann brauchst Du sicherlich eine neue Brille ^_^
+56 ich muss mir unbedingt mal die Tarnkappe von <?query/?> ausleihen. Scheint ja prima zu funktioneren.
+56 schau Dir bitte nochmal ganz genau an, wer grade alles im Channel ist.
+57 Tut mir leid, aber Wildcards ('?', oder '*') sind bei der Suche nicht erlaubt.
+58 Öhm... naja... etwas arg lang, dieser Nick... :)
+
+#
+## Kein Ergebnis
+#
+65 Ich kann mich nicht daran erinnern, <?query/?> gesehen zu haben...
+65 <?query/?>? Hmm... ich bin mir nicht sicher... vielleicht... eventuell... nein, kenne ich nicht.
+65 der Name sagt mir nichts. Hast Du Dich vielleicht vertippt?
+66 Ich hab' <?query/?> seit <?laston/?> nicht mehr gesehen.
+67 Sorry, aber zu deiner Anfrage passt nichts in meiner Datenbank :(
+68 Autschi, das gab viel zu viele Ergebnisse. Bitte formuliere deine Suche etwas genauer.
+
+73 <?query/?> ist grade unter dem Nick "<?othernick/?>" in diesem Channel zu finden.
+74 <?query/?> ist gerade in <?otherchan/?>.
+75 Deine Anfrage führte zu genau einem Ergebnis:
+76 Immerhin <?numresults/?> Treffer ergab deine Anfrage:
+77 Wow, auf deine Anfrage passen sogar <?numresults/?> Einträge in meiner Datenbank! Dies sind die 5 aktuellsten:
+
+#
+## falls ein anderer Bot etwas gefunden hat:
+#
+85 <?remotebot/?> sagt: 
+
+#
+## die eigentliche Information
+#
+101 Ich habe <?snick/?> (<?shost/?>) zuletzt <?schan/?> vor <?swhen/?> betreten sehen (<?stime/?>). <?snick/?> ist noch immer da.
+121 Ich habe <?snick/?> (<?shost/?>) zuletzt <?schan/?> vor <?swhen/?> betreten sehen (<?stime/?>), aber <?snick/?> verschwand mysteriöserweise.
+102 Ich habe <?snick/?> (<?shost/?>) zuletzt <?schan/?> vor <?swhen/?> nach <?spent/?> verchatteter Zeit verlassen sehen (<?stime/?>)
+103 Ich habe <?snick/?> (<?shost/?>) zuletzt in <?schan/?> gesehen, als er/sie vor <?swhen/?> (<?stime/?>) nach <?spent/?> das IRC verließ ("<?smsg/?>").
+104 Zuletzt habe ich <?snick/?> (<?shost/?>) vor <?swhen/?> in <?schan/?> gesehen, den Nick zu <?snick2/?> wechselnd. <?snick2/?> ist noch immer dort.
+124 <?snick/?> (<?shost/?>) was last seen changing his/her nick to <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>), but <?snick2/?> mysteriously dematerialized.
+105 Zuletzt habe ich <?snick/?> (<?shost/?>) vor <?swhen/?> in <?schan/?> gesehen, den Nick von <?snick2/?> wechselnd. <?snick/?> ist noch immer dort.
+125 <?snick/?> (<?shost/?>) was last seen changing his/her nick from <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>), but <?snick/?> mysteriously dematerialized.
+106 Zuletzt habe ich <?snick/?> (<?shost/?>) gesehen, als er vor <?swhen/?> (<?stime/?>) von <?punisher/?> aus <?schan/?> gejagt wurde. (<?kickreason/?>)
+107 <?snick/?> (<?shost/?>) habe ich zuletzt vor <?swhen/?> gesehen, als er/sie von <?schan/?> aus in einem Netsplit verschwand.
+108 <?snick/?> (<?shost/?>) habe ich zuletzt vor <?swhen/?> gesehen, als er/sie nach einem Netsplit in <?schan/?> zurück kam. <?snick/?> ist noch immer dort.
+128 <?snick/?> (<?shost/?>) habe ich zuletzt vor <?swhen/?> gesehen, als er/sie nach einem Netsplit in <?schan/?> zurück kam. Allerdings konnte <?snick/?> dem Gott der Netsplits nicht endgültig entkommen und ist wieder verschollen...
+109 <?snick/?> was last seen joining the botnet channel <?schan/?> on <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+129 <?snick/?> was last seen joining the partyline on <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+110 <?snick/?> was last seen leaving the botnet channel <?schan/?> from <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+130 <?snick/?> was last seen leaving the partyline from <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+140 <?snick/?> (<?shost/?>) was last seen on <?schan/?> <?swhen/?> ago (<?stime/?>).
+
+#
+## Seen-Mitteilungen
+#
+170 <?rnick/?> (<?rhost/?>) scheint vor <?rwhen/?> (<?rtime/?>) in <?rchan/?> auf der Suche nach Dir gewesen zu sein.
+171 <?requests/?> Leute haben sich nach Dir erkundigt:
+172 Der/die letzte war <?rnick/?> (<?rhost/?>) in <?rchan/?> vor <?rwhen/?> (<?rtime/?>).
+
+#
+## Statistiken
+#
+180 Momentan sind <?totalnicks/?> Nicks in meiner Datenbank. Gesamter Speicherverbrauch: <?totalbytes/?> Bytes
+180 In meiner Datenbank befinden sich <?totalnicks/?> Nicks und verbrauchen <?totalbytes/?> Bytes Speicher.

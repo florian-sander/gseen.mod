@@ -1,0 +1,131 @@
+#####################################################################
+#
+# Default English langfile for GSeen.Mod v1.1.0
+#
+# Just edit the text below to fit your needs. You can add or remove
+# any tag just like you want, they do not need to appear in a special
+# order (or number).
+#
+# If you enter more than one line per ID, then a random one will be
+# chosen for each reply. (this does not work for the time strings)
+#
+# If you think you need more tags, just email me and maybe I'll add
+# them in the next release.
+#
+# A complete list of available Tags can be found at the end of the
+# file slang_gseen_commands.c (unfortunately, it does not contain any
+# descriptions for the tags)
+#
+#####################################################################
+
+#
+## time string
+#
+# each time string in singular and plural
+#
+D 0 year
+D 1 years
+D 2 week
+D 3 weeks
+D 4 day
+D 5 days
+D 6 hour
+D 7 hours
+D 8 minute
+D 9 minutes
+D 10 second
+D 11 seconds
+# if an invalid time value was supplied, output the following string
+D 12 some time
+
+#
+## Prefixes
+#
+# These are the prefixes of the replies. By default, there's only
+# a prefix for public requests (so you know for whom the answer is),
+# but you can also define prefixes for other requests.
+
+# for replies in the channel:
+10 <?nick/?>, 
+# for replies via notice:
+11
+# for replies via PRIVMSG
+12
+# for replies on the partyline
+13
+
+#
+## error messages
+#
+54 do you know what a parameter is?
+54 don't you think it would be more reasonable to say for whom you are searching?
+54 42.
+55 do I look like a mirror? ^_^
+55 mirror mirror on the wall...
+55 do you have a split personality? *eg*
+56 if you can't see <?query/?> here right now, you probably need new glasses. ^_^
+56 please look a bit closer at the memberlist of this channel.
+57 I'm sorry, but wildcards ('?' or '*') are not allowed in a search.
+58 Hum... don't you think this nick is a bit long? ^_^
+58 you know that the length of nicks is limited, don't you?
+
+#
+## no result
+#
+65 I don't remember seeing <?query/?>.
+65 <?query/?>? hmm... I'm trying to remember... maybe... I'm not sure... no. I don't remember <?query/?>.
+66 I haven't seen <?query/?> for <?laston/?>.
+67 I found no matches to your query.
+67 I'm sorry, but your search didn't return any results.
+68 Ouch, your search returned way too many matches. Please refine it.
+
+#
+## victim is online
+#
+73 <?query/?> is <?othernick/?>, who is on this channel right now.
+74 <?query/?> is on <?otherchan/?> right now.
+
+#
+## results found
+#
+75 I found one match to your query:
+76 I found <?numresults/?> matches to your query:
+77 I found <?numresults/?> matches to your query. These are the 5 most recent ones:
+
+#
+## results found by another bot in the botnet
+#
+85 <?remotebot/?> says: 
+
+#
+## the core info
+#
+101 <?snick/?> (<?shost/?>) was last seen joining <?schan/?> <?swhen/?> ago (<?stime/?>). <?snick/?> is still there.
+121 <?snick/?> (<?shost/?>) was last seen joining <?schan/?> <?swhen/?> ago (<?stime/?>), but <?snick/?> mysteriously dematerialized.
+102 <?snick/?> (<?shost/?>) was last seen parting <?schan/?> <?swhen/?> ago (<?stime/?>), after spending <?spent/?> there.
+103 <?snick/?> (<?shost/?>) was last seen quitting <?schan/?> <?swhen/?> ago (<?stime/?>) stating "<?smsg/?>" after spending <?spent/?> there.
+104 <?snick/?> (<?shost/?>) was last seen changing his/her nick to <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>). <?snick2/?> is still there.
+124 <?snick/?> (<?shost/?>) was last seen changing his/her nick to <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>), but <?snick2/?> mysteriously dematerialized.
+105 <?snick/?> (<?shost/?>) was last seen changing his/her nick from <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>). <?snick/?> is still there.
+125 <?snick/?> (<?shost/?>) was last seen changing his/her nick from <?snick2/?> on <?schan/?> <?swhen/?> ago (<?stime/?>), but <?snick/?> mysteriously dematerialized.
+106 <?snick/?> (<?shost/?>) was last seen being kicked from <?schan/?> by <?punisher/?> (<?kickreason/?>) <?swhen/?> ago (<?stime/?>), after spending <?spent/?> there.
+107 <?snick/?> (<?shost/?>) was last seen splitting from <?schan/?> <?swhen/?> ago (<?stime/?>), after spending <?spent/?> there.
+108 <?snick/?> (<?shost/?>) was last seen rejoining <?schan/?> from a netsplit <?swhen/?> ago (<?stime/?>) <?snick/?> is still there.
+128 <?snick/?> (<?shost/?>) was last seen rejoining <?schan/?> from a netsplit <?swhen/?> ago (<?stime/?>), but the god of netsplits didn't let him escape, so he's not here now.
+109 <?snick/?> was last seen joining the botnet channel <?schan/?> on <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+129 <?snick/?> was last seen joining the partyline on <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+110 <?snick/?> was last seen leaving the botnet channel <?schan/?> from <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+130 <?snick/?> was last seen leaving the partyline from <?bnbot/?> <?swhen/?> ago (<?stime/?>).
+140 <?snick/?> (<?shost/?>) was last seen on <?schan/?> <?swhen/?> ago (<?stime/?>).
+
+#
+## seen notification
+#
+170 <?rnick/?> (<?rhost/?>) was looking for you on <?rchan/?> <?rwhen/?> ago (<?rtime/?>).
+171 There have been <?requests/?> users looking for you:
+172 The last one was <?rnick/?> (<?rhost/?>) on <?rchan/?> <?rwhen/?> ago (<?rtime/?>).
+
+#
+## seen stats
+#
+180 I'm currently tracking <?totalnicks/?> nicks using <?totalbytes/?> bytes.

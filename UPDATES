@@ -1,0 +1,56 @@
+Changes in gseen.mod: (since v1.0.0)
+--------------------
+
+1.1.1
+- fixed "no newline" compilation warnings that appeared on some systems.
+- fixed uninitialized "li" variable in do_seen()
+- fixed lacking compatibility to eggdrop1.4 (confirmation anyone?)
+- new option: hide-secret-chans
+- new option: seen-nick-len
+
+1.1.0	(15.6.2001)
+- added multilang support
+- removed static buffers
+- organized data in a binary search tree (much faster)
+- optimized a few other things
+- added settings:
+    - fuzzy-search
+    - max-matches
+    - wildcard-search
+
+1.0.8
+- quiet-seens wasn't working for !seennick
+- added quiet-ai-seens
+- renamed nopub to nopubseens and nolog to noseendata and
+  quietseen to quietseens
+
+1.0.7
+- added compatibility to !channels
+- fixed a bug relating strict-host 0 had some strange effects on
+  !seen requests for users with ~ in their ident
+
+1.0.6
+- fixed a very evil bug that allowed anyone to crash the bot, sorry
+
+1.0.5
+- quietseens wasn't working correctly
+- added support for egg1.5's udef chansets
+
+1.0.4
+- added GPL stuff
+- changed error msg that appears if no gseen file exists
+
+1.0.3
+- readme updates
+- fixed a grammatical error in do_seen
+
+1.0.2
+- bot wanted to free a NULL pointer sometimes
+
+1.0.1
+- !seen without parameter returned stupid results :)
+- fixed little typo in .purgeseens
+- "I found 1 matches..." -> "I found 1 match..."
+
+1.0.0
+- release :)

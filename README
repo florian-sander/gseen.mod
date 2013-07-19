@@ -1,0 +1,140 @@
+Description:
+------------
+
+gseen.mod is a seen module for eggdrop that tracks not only the users in the
+bot's userfile, but everyone who enters one of the bots channels.
+It does pretty much the same as the popular script bseen and has a few
+additional features like AI-seen and seen-notification.
+It's also way faster than any corresponding script because scripts are always
+much slower than modules. Especially scripts that deal with large amount of
+data often become incredible slow.
+
+Installation:
+-------------
+
+gseen.mod is written for eggdrop1.6, but it should also work with eggdrop 1.4.
+
+You need the eggdrop source to compile the module.
+
+The following instructions assume, ~/eggdrop1.6.2/ is the directory
+where you installed your eggdrop from. (of course, other source dirs
+will work as well)
+
+Put gseen.mod.1.1.0.tar.gz in ~/eggdrop1.6.2/src/mod/,
+and unpack it (tar xfz gseen.mod.1.1.0.tar.gz). Change directory
+back to ~/eggdrop1.6.2/.
+
+Now just do what you've done when you compiled your bot:
+"./configure"
+"make config" (you can skip this command on eggdrop 1.4)
+"make"
+"make install"
+
+Don't forget to copy the langfiles from eggdrop1.6.2/src/mod/gseen.mod/ to
+eggdrop/language.
+
+All settings can be found in ~/eggdrop1.6.2/src/mod/gseen.mod/gseen.conf
+Copy it to your eggdrop directory, edit it to fit your needs and put
+"source gseen.conf" at the end of your eggdrop config file. The last thing
+to do is to .rehash your bot.
+
+
+Public commands:
+----------------
+
+!seen <nick>
+  I think this command doesn't need an explanation. ^_^
+!seen <mask>
+  Searches the database for entries that match <mask>
+  for example "!seen *!user@dialin-*.isp.com"
+!seennick <nick>
+  !seen also checks if a user was online later with a
+  different nick. !seennick only seens for <nick>
+!seenstats
+  just a little report on how many nicks are tracked
+
+All commands are also accessible via /msg.
+("/msg <bot> seen <nick>", for example)
+
+
+AI seen:
+--------
+
+This module has a simple built in AI routine.
+A short example:
+
+<G`Quann> Argo: have you seen Fabian recently?
+<|Argo|> G`Quann, fabian (~fabian@dns.gifs.de) was last seen quitting
+from #eggdev 1 week 4 days 9 hours 40 minutes 56 seconds ago
+(20.02. 01:39) stating ".....zzzzZZZzzZZZzZZZZZZZZZZzzz..".
+
+Well, it's not a very intelligent AI, it's rather brute-force. So don't
+forget to use the ai-seen-ignore setting.
+I know that's not coded very elegant, but if you configure it correctly,
+the failure-rate is way lower than with other AI scripts...
+
+DCC commands:
+-------------
+
+.seen
+.seennick
+.seenstats
+  just the same as the public versions
+.purgeseens
+  deletes expired data (this also happens automatically once a day)
+  (m)
+
+Channel Settings:
+-----------------
+
+  +noseendata
+	don't log any seen data in this channel
+  +quietseens
+	send answers directly via notice to the person who asked and
+	don't bother the rest of the channel with the reply
+  +quietaiseens
+	same as +quietseens, but for AI seens
+  +nopubseens
+	ignore every seen-command in this channel
+
+TCL commands:
+-------------
+
+There are no special tcl commands, only the usual bind procs.
+
+The only one that should be mentioned is:
+
+*pubm:seen <nick> <uhost> <hand> <chan> <text>
+  triggers the AI seen
+  returns: 1 if a reply was sent, 0 otherwise
+
+So if you're using another AI script on your bot, you can modify it to
+use this proc and avoid doubled replies this way.
+
+Other:
+------
+
+There is absolutely NO WARRANTY on this module. I do my best to make it
+work properly, but if anything gets screwed up, I'm not responsible. Use
+this module at your own risk.
+
+Feedback:
+---------
+
+Feel free to send feedback and bugreports (I hope there won't be any<g>) to
+gseen.mod@visions-of-fantasy.de
+
+The newest gseen version can always be found at:
+http://www.visions-of-fantasy.de/gseen.mod/
+
+Thanks to:
+----------
+
+- Fabian for teaching me plenty of things
+- everyone who tested the many buggy development versions :)
+- the eggdev team for developing eggdrop
+
+Most of all, I would like to thank Bass for writing bseen.tcl because alot
+of the ideas for this module came from using that tcl script. It's still the
+most powerful seen script, so if you want something that's easier to use than
+a module, get a copy of bseen.tcl.
