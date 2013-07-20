@@ -13,6 +13,8 @@ Installation:
 -------------
 
 gseen.mod is written for eggdrop1.6, but it should also work with eggdrop 1.4.
+It has been reported to work with eggdrop 1.8, but I did not test it
+myself on that version.
 
 You need the eggdrop source to compile the module.
 
@@ -118,14 +120,11 @@ There is absolutely NO WARRANTY on this module. I do my best to make it
 work properly, but if anything gets screwed up, I'm not responsible. Use
 this module at your own risk.
 
-Feedback:
+Homepage:
 ---------
 
-Feel free to send feedback and bugreports (I hope there won't be any<g>) to
-gseen.mod@visions-of-fantasy.de
-
 The newest gseen version can always be found at:
-http://www.visions-of-fantasy.de/gseen.mod/
+http://www.kreativrauschen.com/gseen.mod/
 
 Thanks to:
 ----------

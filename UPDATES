@@ -1,6 +1,10 @@
 Changes in gseen.mod: (since v1.0.0)
 --------------------
 
+1.1.2
+- compatibility to eggdrop 1.8
+
+
 1.1.1
 - fixed "no newline" compilation warnings that appeared on some systems.
 - fixed uninitialized "li" variable in do_seen()
