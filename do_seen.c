@@ -29,7 +29,7 @@
  */
 static char *do_seen(char *mask, char *nick, char *uhost, char *chan, int bns)
 {
-  char hostbuf[UHOSTLEN + 1], *host, *newhost, *tmp, *dur;
+  char hostbuf[UHOSTLEN + 1], *host, *tmp, *dur;
   seendat *l;
   gseenres *r;
   int wild, nr;
@@ -47,7 +47,6 @@ static char *do_seen(char *mask, char *nick, char *uhost, char *chan, int bns)
   l = NULL;
   li = NULL;
   host = hostbuf;
-  newhost = NULL;
   mask = newsplit(&mask);
   glob_query = mask;
   while (mask[0] == ' ')
@@ -295,7 +294,7 @@ static char *do_seennick(seendat *l)
  */
 static gseenres *findseens(char *mask, int *ret, int fuzzy)
 {
-  char hostbuf[UHOSTLEN + 1], *host, *newhost;
+  char hostbuf[UHOSTLEN + 1], *host;
   seendat *l;
   int wild;
 
@@ -304,7 +303,6 @@ static gseenres *findseens(char *mask, int *ret, int fuzzy)
   *ret = WS_OK;
   l = NULL;
   host = hostbuf;
-  newhost = NULL;
   mask = newsplit(&mask);
   while (mask[0] == ' ')
     mask++;

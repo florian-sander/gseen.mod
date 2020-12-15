@@ -41,7 +41,7 @@
 #define SLRBOTSAYS      getslang(85)
 
 #define SLYEAR          getdur(0)
-#define SLYEARS         getdur(1)
+#define SLYEARS         getdur(-1)
 #define SLWEEK          getdur(2)
 #define SLWEEKS         getdur(3)
 #define SLDAY           getdur(4)

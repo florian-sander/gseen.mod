@@ -36,7 +36,7 @@ static int quietaiseens(char *chan)
 
 static int tcl_pubmseen STDVAR
 {
-  char *nick, *uhost, *hand, *chan, *text;
+  char *nick, *uhost, *chan, *text;
   char buf[1024];
   char *words, *word;
   seendat *l;
@@ -46,7 +46,6 @@ static int tcl_pubmseen STDVAR
   BADARGS(6, 6, " nick uhost hand chan text");
   nick = argv[1];
   uhost = argv[2];
-  hand = argv[3];
   chan = argv[4];
   text = argv[5];
   reset_global_vars();

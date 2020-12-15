@@ -100,14 +100,14 @@ static void slang_send_numresults()
 static void slang_send_punisher()
 {
   char *reason;
-  int len;
+  ptrdiff_t len;
   
   if (glob_seendat) {
     reason = strchr(glob_seendat->msg, ' ');
     if (!reason)
       strncat(slang_text_buf, glob_seendat->msg, sizeof(slang_text_buf));
     else {
-      len = (int) reason - (int) glob_seendat->msg;
+      len = reason - glob_seendat->msg;
       strncat(slang_text_buf, glob_seendat->msg, (sizeof(slang_text_buf) < len) ? sizeof(slang_text_buf) : len);
     }
   }

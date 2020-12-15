@@ -64,7 +64,7 @@ static struct slang_header *slang_create(struct slang_header *list, char *lang, 
   struct slang_header *nslang, *l;
 
   Assert(lang);
-  debug2("Creating language '%s' starting by %d", lang, (int) list);
+  debug2("Creating language '%s' starting by %" PRIdPTR, lang, list);
   for (nslang = list; nslang; nslang = nslang->next)
     if (!strcasecmp(nslang->lang, lang))
       return list;
@@ -194,7 +194,7 @@ static struct slang_header *slang_find(struct slang_header *where, char *languag
     if (!strcasecmp(slang->lang, language))
       return slang;
   // oops... language seems to be invalid. Let's find the default.
-  Assert(default_slang);
+  Assert(default_slang != NULL);
   for (slang = where; slang; slang = slang->next)
     if (!strcasecmp(slang->lang, default_slang))
       return slang;
@@ -218,7 +218,7 @@ static int slang_valid(struct slang_header *where, char *language)
 }
 #endif
 
-static char getslang_error[12];
+static char getslang_error[17];
 static char *getslang(int id)
 {
   char *text;
