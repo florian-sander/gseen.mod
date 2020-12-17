@@ -232,42 +232,42 @@ static int gseen_chpt STDVAR
 
 static cmd_t seen_kick[] =
 {
-  {"*", "", (Function) gseen_kick, "gseen"},
+  {"*", "", (IntFunc) gseen_kick, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_nick[] =
 {
-  {"*", "", (Function) gseen_nick, "gseen"},
+  {"*", "", (IntFunc) gseen_nick, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_join[] =
 {
-  {"*", "", (Function) gseen_join, "gseen"},
+  {"*", "", (IntFunc) gseen_join, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_part[] =
 {
-  {"*", "", (Function) gseen_part, "gseen"},
+  {"*", "", (IntFunc) gseen_part, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_sign[] =
 {
-  {"*", "", (Function) gseen_sign, "gseen"},
+  {"*", "", (IntFunc) gseen_sign, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_splt[] =
 {
-  {"*", "", (Function) gseen_splt, "gseen"},
+  {"*", "", (IntFunc) gseen_splt, "gseen"},
   {0, 0, 0, 0}
 };
 
 static cmd_t seen_rejn[] =
 {
-  {"*", "", (Function) gseen_rejn, "gseen"},
+  {"*", "", (IntFunc) gseen_rejn, "gseen"},
   {0, 0, 0, 0}
 };

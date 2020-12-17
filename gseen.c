@@ -18,8 +18,8 @@
 
 #define MAKING_GSEEN
 #define MODULE_NAME "gseen"
-#define MODULE_VERSION "1.1.2"
-#define MODULE_NUMVERSION 10100
+#define MODULE_VERSION "1.2.0"
+#define MODULE_NUMVERSION 10200
 #include "../module.h"
 #include "../irc.mod/irc.h"
 #include "../server.mod/server.h"
@@ -258,7 +258,7 @@ char *gseen_start(Function * global_funcs)
 {
   global = global_funcs;
   Context;
-  module_register(MODULE_NAME, gseen_table, 1, 1);
+  module_register(MODULE_NAME, gseen_table, 1, 2);
   if (!(irc_funcs = module_depend(MODULE_NAME, "irc", 1, 0)))
     return "You need the irc module to use the gseen module.";
   if (!(server_funcs = module_depend(MODULE_NAME, "server", 1, 0)))

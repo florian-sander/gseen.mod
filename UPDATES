@@ -1,9 +1,11 @@
 Changes in gseen.mod: (since v1.0.0)
 --------------------
 
+1.2.0 (2020-12-15)
+- fixed some compiler warnings (Michael Ortmann)
+
 1.1.2 (2017-01-02)
 - compatibility to eggdrop 1.8
-
 
 1.1.1
 - fixed "no newline" compilation warnings that appeared on some systems.
@@ -12,7 +14,7 @@ Changes in gseen.mod: (since v1.0.0)
 - new option: hide-secret-chans
 - new option: seen-nick-len
 
-1.1.0	(15.6.2001)
+1.1.0 (2001-06-15)
 - added multilang support
 - removed static buffers
 - organized data in a binary search tree (much faster)
