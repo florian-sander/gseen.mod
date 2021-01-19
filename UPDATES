@@ -1,7 +1,12 @@
 Changes in gseen.mod: (since v1.0.0)
 --------------------
 
+1.2.1 (2021-01-19)
+- fix buffer overflow (Michael Ortmann)
+
 1.2.0 (2020-12-15)
+- slightly changed makefile that makes it a bit easier to build outside the src
+  directory (Harekiet)
 - fixed some compiler warnings (Michael Ortmann)
 
 1.1.2 (2017-01-02)

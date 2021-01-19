@@ -68,6 +68,8 @@ static void read_seens()
     s = buf;
     fgets(s, 511, f);
     i = strlen(buf);
+    if (!i)
+      continue;
     if (buf[i - 1] == '\n')
       buf[i - 1] = 0;
     if ((buf[0] == 0) || (buf[0] == '#'))
