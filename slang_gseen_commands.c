@@ -68,7 +68,7 @@ static void slang_send_stime()
   
   if (glob_seendat) {
     tt = glob_seendat->when;
-    strftime(t, 19, "%d.%m. %H:%M", localtime(&tt));
+    strftime(t, sizeof(t), "%d.%m.%Y %H:%M", localtime(&tt));
     strncat(slang_text_buf, t, sizeof(slang_text_buf));
   }
 }
@@ -159,7 +159,7 @@ static void slang_send_rtime()
   if (glob_seenrequest) {
     Assert(glob_seenrequest->by);
     tt = glob_seenrequest->by->when;
-    strftime(t, sizeof(t), "%d.%m. %H:%M", localtime(&tt));
+    strftime(t, sizeof(t), "%d.%m.%Y %H:%M", localtime(&tt));
     strncat(slang_text_buf, t, sizeof(slang_text_buf));
   }
 }
