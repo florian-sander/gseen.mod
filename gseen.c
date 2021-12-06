@@ -265,13 +265,15 @@ char *gseen_start(Function * global_funcs)
     return "You need the server module to use the gseen module.";
   if (!(channels_funcs = module_depend(MODULE_NAME, "channels", 1, 0)))
     return "You need the channels module to use the gseen module.";
-  if (!module_depend(MODULE_NAME, "eggdrop", 108, 0)) {
-    if (!module_depend(MODULE_NAME, "eggdrop", 107, 0)) {
-      if (!module_depend(MODULE_NAME, "eggdrop", 106, 0)) {
-        if (!module_depend(MODULE_NAME, "eggdrop", 105, 0)) {
-          if (!module_depend(MODULE_NAME, "eggdrop", 104, 0)) {
-            module_undepend(MODULE_NAME);
-            return "This module requires eggdrop1.4.0 or later";
+  if (!module_depend(MODULE_NAME, "eggdrop", 109, 0)) {
+    if (!module_depend(MODULE_NAME, "eggdrop", 108, 0)) {
+      if (!module_depend(MODULE_NAME, "eggdrop", 107, 0)) {
+        if (!module_depend(MODULE_NAME, "eggdrop", 106, 0)) {
+          if (!module_depend(MODULE_NAME, "eggdrop", 105, 0)) {
+            if (!module_depend(MODULE_NAME, "eggdrop", 104, 0)) {
+              module_undepend(MODULE_NAME);
+              return "This module requires eggdrop1.4.0 or later";
+            }
           }
         }
       }
